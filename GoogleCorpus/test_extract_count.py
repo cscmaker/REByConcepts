@@ -9,7 +9,7 @@ import tools
 
 
 def CombineExtractAndCountPredicate(keywords, window, support_value, confidence_value):
-  content_dir = 'content_analysis_html_'+urllib.quote(keywords)
+  content_dir = '/home/csc/GoogleCorpus/content_analysis_html_'+urllib.quote(keywords)
   context_dir = 'context_html_'+urllib.quote(keywords)
   predicate_dir = 'predicate_'+urllib.quote(keywords)
   predicate_freq_file_context = 'freq/context_predicate_freq_'+urllib.quote(keywords)
@@ -35,7 +35,7 @@ def ChoosePredicate(predicate_dir, keywords, limit):
 
 if __name__ == '__main__':
 
-  f = open('/home/csc/project/ConceptList', 'r')
+  f = open('RelationConcept', 'r')
   chunk = f.read()
   keylist = chunk.split('\n')
   for key in keylist:

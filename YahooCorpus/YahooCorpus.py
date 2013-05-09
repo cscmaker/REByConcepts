@@ -132,14 +132,14 @@ def GetCorpusFromBing(keywords, pages = 1000):
   page = 0
   num = pages/100
   for x in range(num):
-    #page = x*100
-    #thread_scratch_work(keywords, page, content_dir)
     page = x*100
-    t = threading.Thread(target = thread_scratch_work, args=(keywords, page, content_dir))
-    threads.append(t)
-    t.start()
-  for t in threads:
-    t.join()
+    thread_scratch_work(keywords, page, content_dir)
+    #page = x*100
+    #t = threading.Thread(target = thread_scratch_work, args=(keywords, page, content_dir))
+    #threads.append(t)
+    #t.start()
+ # for t in threads:
+  #  t.join()
 
 if __name__ == '__main__':
     

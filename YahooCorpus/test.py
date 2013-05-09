@@ -14,12 +14,12 @@ while True:
   if not chunk:
     break
   chunk = chunk.replace('\n', '')
-  #process_work(chunk, 1000)
-  process = multiprocessing.Process(target = process_work, args = (chunk,800))
-  process.start()
-  process_record.append(process)
+  process_work(chunk, 1000)
+  #process = multiprocessing.Process(target = process_work, args = (chunk,800))
+  #process.start()
+  #process_record.append(process)
 #主进程等待
-for process in process_record:
-  process.join()
+#for process in process_record:
+ # process.join()
 
 print '抓取完毕'
