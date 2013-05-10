@@ -2,7 +2,7 @@
 import GoogleCorpus
 import os
 
-f = open('NoRelationConcept', 'r')
+f = open('ConceptList', 'r')
 while True:
   chunk = f.readline()
   chunk = chunk.replace('\n', '')

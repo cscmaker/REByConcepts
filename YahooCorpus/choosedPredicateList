@@ -1,4 +1,41 @@
-#Actor&Dressing room:
+computer&mouse:have&come&use&buy&allow
+computer&keyboard:use&have&see&mouse
+hand&cellphone:drive&use&say&have&ban
+student&homework:do&make&get&say&help&give&assign&learn&take&use&complete&understand&need&spend&write
+#policeman&gun:say&guarantee&get&include&use&scatter&issue
+#head&hat:felt&make&black&fit&wear&brown&stretch
+#hand&hair:style&look&certify&tread&take&feature&bow
+#hand&gloves:glow&fit&include&rave
+#gun&bullet:fire&use&gun&make&unite&load&catch&regulate
+#foot&shoes:shoe&run&wear&make&walk
+#computer&screen:have&use&make&license
+#car&wheel:have&play&race&use&drive
+#bus&driver:drive&have&include&become
+#writer&book:write&get&come&make&read&use&create&sell
+#teacher&student:use&provide&teach&link
+#speaker&music:use&see&play&expand&take&seem&refine&offer&listen&stream&sound
+#shark&sea:catch&say&make&play&kill&include&found&drag&shepherd&turn&grab
+#Screen&image:use&display&see&create&want&embed&set&look&allow&add&make
+#plane&sky:cast&equip&air&ring&enter&quote&see
+#pilot&plane:say&fly&land&pilot&take&crash&go&give&train
+#painter&picture:use&paint&follow&create
+#nurse&patient:staff&nurse&register&increase&provide&require&need&care&work&use
+#mouth&sound:sound&brush&use&get&make&say&lick
+#manager&worker:run&injure&manage&need&say
+#fisher&fish:fish&land&know&say&support
+#farmer&field:field&design&learn&make&provide&allow
+#employer&employee:provide&offer&pay&share&employ&require
+#driver&car:get&race&dirve&show&make&see&take
+#doctor&patient:say&make&take&see&know&need&give&improve&ask
+#diners&food:make&drink&unite&feed&cook&endorse
+#Critic&movie:make&write&win&become&film&keep&bestow&review
+#cook&food:cook&make&eat&use&heat&keep&kill
+#Concert&Musician:give&write&begin&perform&play&leave&say
+#Circus&Performance:give&use&include&take&perform&open&unite
+#chef&food:cook&make&taste&serve
+#cellphone&message:send&sound&use&display
+Box office&ticket:purchase&pick&call&sell&locate
+#bank&money:lend&launder&create&use&give&make&say&include
 #Actor&Rehearsal room:think&unpack&arrive&explain&require&provide
 #Actor&Backstage:cast&take&become&work&found&try&try&know&include
 #Actor&Character:make&play&include&use&act&become&say
@@ -6,26 +43,18 @@
 #Actor&Modern Drama:act&support&play&advance&direct&break&light&work
 #Audience&Drama:make&imagine&call&use&consider&allow&engage&see
 #Audience&ticket:need&get&show&receive&earn&provide&attend&start
-#Box office&ticket
 #Choir&Chorus:perform&chorus&sing&include&become&conduct
 #Choreographer&Dance:work&create&think&include&become&make
 #Cinema&Movie:wed&open&show&come&equip&play&seat&view
-#Circus&Performace
-#Comedian&Comedy
-Composer&Music:include&write&use&perform&compose&create
-#Concert&Musician
-#Conductor&Instrumental performace:serve&commission&lead&unite&work&record&conduct
-#Critic&movie
+#Composer&Music:include&write&use&perform&compose&create
 #Dancer&Dance:include&perform&use&call&develop&begin&make&know
 #Director&Drama:direct&work&include&take&cast
-Director&Movie:make&direct&win&become
+#Director&Movie:make&direct&win&become
 #Musician&Musical:include&perform&make&take&use&provide&record&play&work
-#Singer&Song
 #Scriptwriter&Play script:write&get&keep&consist&save&tech
-#Screen&image:
 #Projection&Video:map&use&project&create&know&see
 #Producer&Movie:make&take&get&wish&include&thank&look&become&produce
-Pianist&Piano:play&record&perform&make&praise
-Performer&Opera:perform&include&sing&make&create&write&use&appear
+#Pianist&Piano:play&record&perform&make&praise
+#Performer&Opera:perform&include&sing&make&create&write&use&appear
 #Orchestra&Instrument:use&make&play&string&include&sound
 

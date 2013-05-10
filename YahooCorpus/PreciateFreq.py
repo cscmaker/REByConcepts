@@ -172,4 +172,4 @@ if __name__ == '__main__':
      concepts = (chunk.split(':'))[0]
      predicate_list = ((chunk.split(':'))[1]).split('&')
      print  predicate_list
-     CountPredicateFreqByConcepts('content_related_html_', concepts, 1, predicate_list)      
+     CountPredicateFreqByConcepts('/home/csc/YahooCorpus/content_related_html_', concepts, 1, predicate_list)      

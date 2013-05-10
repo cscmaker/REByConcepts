@@ -77,24 +77,24 @@ def thread_scratch_work(keywords, page, content_dir):
        isGoose = False
        try:
          try:
-           if url.count('/') <= 3 and url[len(url)-1:] == '/':
+          # if url.count('/') <= 3 and url[len(url)-1:] == '/':
             request_url = urllib2.Request(url, None, {'Referer': 'http://www.sina.com'})
             request_url.add_header('User-agent','CSC')
             response_data = urllib2.urlopen(request_url).read()
             content = (Document(response_data).summary()).encode('utf-8')
             if len(content) <= 32:
               content = response_data
-           else:
-            g = Goose()
-            article = g.extract(url = url)
-            content_data = (article.cleaned_text).encode('utf-8')
-            if len(content_data)<32:
-              request_url = urllib2.Request(url, None, {'Referer': 'http://www.sina.com'})
-              request_url.add_header('User-agent','CSC')
-              response_data = urllib2.urlopen(request_url).read()
-              content = response_data
-            else:
-             isGoose = True
+          # else:
+          #  g = Goose()
+          #  article = g.extract(url = url)
+          #  content_data = (article.cleaned_text).encode('utf-8')
+          #  if len(content_data)<32:
+          #    request_url = urllib2.Request(url, None, {'Referer': 'http://www.sina.com'})
+          #    request_url.add_header('User-agent','CSC')
+          #    response_data = urllib2.urlopen(request_url).read()
+          #    content = response_data
+          #  else:
+          #   isGoose = True
          except Exception, e:
            print e
            request_url = urllib2.Request(url, None, {'Referer': 'http://www.sina.com'})
@@ -132,14 +132,14 @@ def GetCorpusFromBing(keywords, pages = 1000):
   page = 0
   num = pages/100
   for x in range(num):
-    page = x*100
-    thread_scratch_work(keywords, page, content_dir)
     #page = x*100
-    #t = threading.Thread(target = thread_scratch_work, args=(keywords, page, content_dir))
-    #threads.append(t)
-    #t.start()
- # for t in threads:
-  #  t.join()
+    #thread_scratch_work(keywords, page, content_dir)
+    page = x*100
+    t = threading.Thread(target = thread_scratch_work, args=(keywords, page, content_dir))
+    threads.append(t)
+    t.start()
+  for t in threads:
+   t.join()
 
 if __name__ == '__main__':
     

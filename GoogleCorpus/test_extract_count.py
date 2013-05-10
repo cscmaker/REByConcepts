@@ -39,5 +39,5 @@ if __name__ == '__main__':
   chunk = f.read()
   keylist = chunk.split('\n')
   for key in keylist:
-   if key != '':
+   if key != '' and key.find('#') == -1:
      CombineExtractAndCountPredicate(key, 1, 0.0, 0.0)
