@@ -6,6 +6,29 @@ if not '/home/csc/project' in sys.path:
   sys.path.append('/home/csc/project')
 
 import FreqStatistics
+def ChoosePredicateByConfidence(freq_dir, outputfile, confidence_value):
+  out_f = open(outputfile, 'w')
+  for filename in os.listdir(freq_dir):
+    full_filename = freq_dir+'/'+filename
+    keywords = urllib.unquote(filename[23:])
+    in_f = open(full_filename, 'r')
+    out_f.write(keywords+':')
+    while True:
+      chunk = in_f.readline()
+      if not chunk:
+        break
+      temp_list = chunk.split(':')
+      if cmp(temp_list[1], confidence_value)>0:
+        out_f.write(temp_list[0])
+        break
+    while True:
+       chunk = in_f.readline()
+       if not chunk:
+         break
+       out_f.write('&'+(chunk.split(':'))[0])
+    out_f.write('\n')
+  out_f.close()
+  return
 
 def ChoosePredicateByX2(content_dir, keywords, predicatefile, limit, window, outputfile):
   return
@@ -56,7 +79,4 @@ def ChoosePredicateByCondition(content_dir, keywords, predicatefile, limit, wind
 
 if __name__ == '__main__':
   
-   keywords = 'hypertension&cerebrovascular disease'
-   ChoosePredicateByCondition('content_analysis_html_'+urllib.quote(keywords), keywords, 'freq/context_predicate_freq_'+urllib.quote(keywords), 0, 2, 'predicate_'+urllib.quote(keywords)+'_Bycondition')
-   ChoosePredicateByPMI('content_analysis_html_'+urllib.quote(keywords), keywords, 'freq/context_predicate_freq_'+urllib.quote(keywords), -9999999, 2, 'predicate_'+urllib.quote(keywords)+'_ByPMI')
-   
+  ChoosePredicateByConfidence('freq', '../choosenPredicateFile_0.01', '0.01')

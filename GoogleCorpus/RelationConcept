@@ -1,10 +1,7 @@
 Journalist& Audience
-Choreographer&Program
 Screenwriter&Script
-Audience&News
 Editor&Video
 Photographer&Photo
-Cameraman&screen
 Editor& Manuscript
 Producer&Funds
 Journalist&News
@@ -14,67 +11,63 @@ Host&Program
 Movie&Subtitle
 Audience& Opinion
 TV&Program
-#policeman&gun
-#head&hat
-#hand&hair
-#hand&gloves
-#gun&bullet
-#foot&shoes
-#computer&screen
-#computer&mouse
-#computer&keyboard
-#car&wheel
-#bus&driver
-#hand&cellphone
-#driver&car
-#pilot&plane
-#doctor&patient
-#manager&worker
-#employer&employee
-#nurse&patient
-#writer&book
-#cook&food
-#farmer&field
-#fisher&fish
-#speaker&music
-#mouth&sound
-#bank&money
+policeman&gun
+head&hat
+hand&gloves
+gun&bullet
+foot&shoes
+computer&screen
+computer&mouse
+computer&keyboard
+car&wheel
+bus&driver
+hand&cellphone
+driver&car
+pilot&plane
+doctor&patient
+manager&worker
+employer&employee
+nurse&patient
+writer&book
+cook&food
+farmer&field
+fisher&fish
+speaker&music
+mouth&sound
+bank&money
 student&homework
-#teacher&student
-#shark&sea
-#plane&sky
-#Choreographer&Dance
-#Audience&Drama
-#Audience&ticket
-#Cinema&Movie
-#Circus&Performance
-#Critic&movie
-#Box office&ticket
-#Screen&image
-#chef&food
-#diners&food
-#Director&Drama
-#Director&Movie
-#Producer&Movie
-#Pianist&Piano
-#Projection&Video
-#Choir&Chorus
-#Concert&Musician
-#Musician&Musical
-#Orchestra&Instrument
-#Composer&Music
-#Actor&Drama
-#Actor&Character
-#Actor&Backstage
-#Dancer&Dance
-#hypertension&cerebrovascular disease
-#obesity&hypertension
-#hypertension&vasodilators
-#Sugar&Grass
-#Key&Adapter
-#Scriptwriter&script
-#Conductor&Instrumental performance
-#Performer&Opera
-#cellphone&message
-#Actor&Modern Drama
-#painter&picture
+teacher&student
+plane&sky
+Choreographer&Dance
+Audience&Drama
+Audience&ticket
+Cinema&Movie
+Circus&Performance
+Critic&movie
+Box office&ticket
+Screen&image
+chef&food
+diners&food
+Director&Drama
+Director&Movie
+Producer&Movie
+Pianist&Piano
+Projection&Video
+Choir&Chorus
+Concert&Musician
+Musician&Musical
+Orchestra&Instrument
+Composer&Music
+Actor&Drama
+Actor&Character
+Actor&Backstage
+Dancer&Dance
+hypertension&cerebrovascular disease
+obesity&hypertension
+hypertension&vasodilators
+Scriptwriter&script
+Conductor&Instrumental performance
+Performer&Opera
+cellphone&message
+Actor&Modern Drama
+painter&picture

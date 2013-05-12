@@ -2,20 +2,21 @@
 #!-*-coding:utf-8-*-
 
 import math, urllib, os, sys
+import multiprocessing
 if not '/home/csc/project' in sys.path:
   sys.path.append('/home/csc/project')
 from nltk.corpus import wordnet as wn
-import FreqStatistics
+import FreqStatistics, FreqStatisticsBak
 
-def CountPredicateFreqByX2(content_dir, keywords, window,predicateList):
-  out_f = open('freq_'+urllib.quote(keywords)+'_byConcepts', 'w')
+def CountPredicateFreqByX2(content_dir, keywords, window,predicateList, size):
+  out_f = open('freq_'+str(size)+'/freq_'+urllib.quote(keywords)+'_byConcepts', 'w')
   print '计算以概念集合的文件夹'
   for predicate in predicateList:
     out_f.write(predicate+':')
-    c1c2_p = FreqStatistics.ContextExtractWithKeywords(content_dir+urllib.quote(keywords), keywords+'&'+predicate, 1, '')
-    c1c2_not_p = FreqStatistics.ContextExtractWithKeywords(content_dir+urllib.quote(keywords), keywords, 1, predicate)
-    p_not_c1c2 = FreqStatistics.ContextExtractWithKeywords(content_dir+urllib.quote(keywords), predicate, 1, keywords)
-    all_0 = FreqStatistics.ContextExtractWithKeywords(content_dir+urllib.quote(keywords), '', 1, '')
+    c1c2_p = FreqStatisticsBak.ContextExtractWithKeywords(content_dir+urllib.quote(keywords), keywords+'&'+predicate, 1, '', size)
+    c1c2_not_p = FreqStatisticsBak.ContextExtractWithKeywords(content_dir+urllib.quote(keywords), keywords, 1, predicate, size)
+    p_not_c1c2 = FreqStatisticsBak.ContextExtractWithKeywords(content_dir+urllib.quote(keywords), predicate, 1, keywords, size)
+    all_0 = FreqStatisticsBak.ContextExtractWithKeywords(content_dir+urllib.quote(keywords), '', 1, '', size)
     o11 = c1c2_p
     o22 = all_0-c1c2_p
     o12 = p_not_c1c2
@@ -133,16 +134,29 @@ def CountPredicateFreqByConcepts(content_dir, keywords, window,predicateList):
     out_f.write(str(p_condition)+'  '+str(pmi)+'  '+str(x2)+'\n')
   out_f.close()
 
+
+def process_work(content, concepts, predicate_list, size):
+  CountPredicateFreqByX2('/home/csc/YahooCorpus/content_related_html_', concepts, 1, predicate_list, size)
+  return 
+
 if __name__ == '__main__':
    f = open('choosedPredicateList')
+   print 'xia yi kai shi 500'
    while True:
-     chunk = f.readline()
-     chunk = chunk.replace('\n', '')
-     if not chunk:
-       break
-     if chunk.find('#') != -1:
-       continue
-     concepts = (chunk.split(':'))[0]
-     predicate_list = ((chunk.split(':'))[1]).split('&')
-     print  predicate_list
-     CountPredicateFreqByConcepts('/home/csc/YahooCorpus/content_related_html_', concepts, 1, predicate_list)      
+     pro = []
+     for i in range(15):
+      chunk = f.readline()
+      chunk = chunk.replace('\n', '')
+      if not chunk:
+        break
+      if chunk.find('#') != -1:
+        continue
+      concepts = (chunk.split(':'))[0]
+      predicate_list = ((chunk.split(':'))[1]).split('&')
+      print  predicate_list
+      process = multiprocessing.Process(target = process_work, args = ('dd',concepts, predicate_list, 500))
+      process.start()
+      pro.append(process)
+     #主进程等待
+     for process in pro:
+        process.join()

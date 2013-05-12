@@ -1,7 +1,7 @@
 #!/usr/bin/python
 #-*-coding:utf-8-*-
 import urllib
-import CountPredicate, ExtractPredicate
+import CountPredicate, ExtractPredicate, PredicateChoosen
 import sys
 if not '/home/csc/project' in sys.path:
   sys.path.append('/home/csc/project')
@@ -41,3 +41,4 @@ if __name__ == '__main__':
   for key in keylist:
    if key != '' and key.find('#') == -1:
      CombineExtractAndCountPredicate(key, 1, 0.0, 0.0)
+ 
